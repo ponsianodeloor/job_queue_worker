@@ -21,3 +21,8 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+.idea/job_queue_worker.iml
+.idea/php.xml
+.idea/phpunit.xml
+.idea/vcs.xml
+.idea/job_queue_worker.iml

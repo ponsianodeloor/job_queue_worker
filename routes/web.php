@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Jobs\Logger;
+use App\Http\Controllers\EmailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,4 +42,10 @@ Route::get('/job_queue_worker_queue_secondary', function () {
     Logger::dispatch()->onQueue('secondary');
 
     return response("Fin");
+});
+
+Route::controller(EmailController::class)->group(function (){
+    Route::get('/write_email', 'write')->name('email.write');
+
+    Route::post('/send_email', 'send')->name('email.send');
 });
